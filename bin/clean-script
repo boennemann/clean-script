@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../')(process.argv[2], process.argv[3])
+require('../').apply(null, process.argv.slice(2))

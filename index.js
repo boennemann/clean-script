@@ -5,7 +5,8 @@ var exec = require('child_process').exec
 var execSync = require('execSync').exec
 var exitHook = require('exit-hook')
 
-module.exports = function(command, exit) {
+module.exports = function(command) {
+  var exits = Array.prototype.slice.call(arguments, 1)
   var child = exec(command, {
     cwd: process.cwd(),
     env: process.env
@@ -18,8 +19,10 @@ module.exports = function(command, exit) {
   child.on('error', process.exit)
 
   exitHook(function() {
-    var result = execSync(exit)
-    process.stdout.write(result.stdout)
+    exits.forEach(function(exit) {
+      var result = execSync(exit)
+      process.stdout.write(result.stdout)
+    })
     child.kill()
   })
 }
