@@ -1,0 +1,36 @@
+{
+  "name": "clean-script",
+  "description": "takes one command to exectue and one to clean up afterwards",
+  "version": "0.0.0",
+  "author": "Stephan Bönnemann <stephan@boennemann.me>",
+  "bin": "./bin/clean-script",
+  "bugs": {
+    "url": "https://github.com/boennemann/clean-script/issues"
+  },
+  "dependencies": {
+    "execSync": "^1.0.2",
+    "exit-hook": "^1.1.1"
+  },
+  "devDependencies": {
+    "bats": "git://github.com/sstephenson/bats",
+    "standard": "^2.3.1"
+  },
+  "homepage": "https://github.com/boennemann/clean-script",
+  "keywords": [
+    "clean",
+    "exit",
+    "scripts",
+    "background",
+    "watch"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boennemann/clean-script.git"
+  },
+  "scripts": {
+    "test": "standard && ./node_modules/bats/libexec/bats test.bats",
+    "install-bats": "git clone https://github.com/sstephenson/bats.git"
+  }
+}
