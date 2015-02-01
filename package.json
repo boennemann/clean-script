@@ -1,7 +1,7 @@
 {
   "name": "clean-script",
   "description": "takes one command to exectue and one to clean up afterwards",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Stephan Bönnemann <stephan@boennemann.me>",
   "bin": "./bin/clean-script",
   "bugs": {
