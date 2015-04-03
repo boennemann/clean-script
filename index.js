@@ -1,11 +1,12 @@
 'use strict'
 
-var exec = require('child_process').exec
-
-var execSync = require('execSync').exec
+var cp = require('child_process')
 var exitHook = require('exit-hook')
 
-module.exports = function(command) {
+var exec = cp.exec
+var execSync = cp.execSync
+
+module.exports = function (command) {
   var exits = Array.prototype.slice.call(arguments, 1)
   var child = exec(command, {
     cwd: process.cwd(),
@@ -18,10 +19,10 @@ module.exports = function(command) {
   child.on('close', process.exit)
   child.on('error', process.exit)
 
-  exitHook(function() {
-    exits.forEach(function(exit) {
+  exitHook(function () {
+    exits.forEach(function (exit) {
       var result = execSync(exit)
-      process.stdout.write(result.stdout)
+      process.stdout.write(result.stdout || result)
     })
     child.kill()
   })

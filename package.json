@@ -1,6 +1,6 @@
 {
   "name": "clean-script",
-  "description": "takes one command to exectue and one to clean up afterwards",
+  "description": "takes one command to execute and one to clean up afterwards",
   "version": "1.1.0",
   "author": "Stephan Bönnemann <stephan@boennemann.me>",
   "bin": "./bin/clean-script",
@@ -8,7 +8,6 @@
     "url": "https://github.com/boennemann/clean-script/issues"
   },
   "dependencies": {
-    "execSync": "^1.0.2",
     "exit-hook": "^1.1.1"
   },
   "devDependencies": {
@@ -33,5 +32,9 @@
   },
   "scripts": {
     "test": "standard && node test | tap-spec"
+  },
+  "engines": {
+    "node": "^0.12",
+    "iojs": "^1"
   }
 }
