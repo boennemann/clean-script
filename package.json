@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "nixt": "^0.4.1",
-    "standard": "^2.3.1",
-    "tap-spec": "^2.2.0",
+    "standard": "^3.3.2",
+    "tap-spec": "^3.0.0",
     "tape": "^3.5.0"
   },
   "homepage": "https://github.com/boennemann/clean-script",
