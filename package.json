@@ -1,7 +1,7 @@
 {
   "name": "clean-script",
   "description": "takes one command to execute and one to clean up afterwards",
-  "version": "1.1.0",
+  "version": "0.0.0-semantically-released",
   "author": "Stephan Bönnemann <stephan@boennemann.me>",
   "bin": "./bin/clean-script",
   "bugs": {
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "nixt": "^0.4.1",
+    "semantic-release": "^3.0.4",
     "standard": "^3.3.2",
     "tap-spec": "^3.0.0",
     "tape": "^3.5.0"
@@ -31,7 +32,9 @@
     "url": "https://github.com/boennemann/clean-script.git"
   },
   "scripts": {
-    "test": "standard && node test | tap-spec"
+    "test": "standard && node test | tap-spec",
+    "prepublish": "semantic-release pre",
+    "postpublish": "semantic-release post"
   },
   "engines": {
     "node": "^0.12",

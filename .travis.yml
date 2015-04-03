@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - iojs-v1
-- '0.12'
 sudo: false
 cache:
   directories:
@@ -11,9 +10,9 @@ notifications:
 deploy:
   provider: npm
   email: stephan@boennemann.me
+  skip_cleanup: true
   api_key:
-    secure: g8g3eTrQ3r5e6juCuEQE3JFkjDz06YGEumH7yNZq1BWoxKWJHYz+WfS1K60zUFy3dli+Y7qDvdeVsVyGd9Y0uaq1v+E9mwFAkiEuhqz63zyL9FFVL6NSVXErCdHOa62p8+6MM/KDKDg1xOkpDXX+6DW/K4xnHAVhZn7/K8Q2wZ8=
+    secure: FAp9VRFyI8jUPg9goEwKkvd30jjE1i03NRdKFBVHdb9kS+Y6OU9x48hWNe9qy4E5JHTtHSkrZY2YakQYBFgvW8rCAwbb6u2RgHeMqCO+iiQ+G7p4WmbpwEaeMFri3wAn2bR/hlhLTZttDz1tBHYd+rLYgvIXuYdNLL/7yss43dI=
   on:
-    all_branches: true
-    tags: true
+    branch: master
     repo: boennemann/clean-script
