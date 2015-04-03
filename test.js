@@ -25,7 +25,7 @@ test('executes exit even when command fails', function (t) {
   .end(handleError(t))
 })
 
-test('executes multiples exits in right order', function (t) {
+test('executes multiple exits in right order', function (t) {
   nixt()
   .run('./bin/clean-script \'echo "close"\' \'echo "cleanup1"\' \'echo "cleanup2"\'')
   .stdout('close\ncleanup1\ncleanup2')
