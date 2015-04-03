@@ -18,6 +18,7 @@ module.exports = function (command) {
 
   child.on('close', process.exit)
   child.on('error', process.exit)
+  child.on('exit', process.exit)
 
   exitHook(function () {
     exits.forEach(function (exit) {
