@@ -11,11 +11,11 @@
     "exit-hook": "^1.1.1"
   },
   "devDependencies": {
-    "nixt": "^0.4.1",
-    "semantic-release": "^3.0.4",
-    "standard": "^3.3.2",
-    "tap-spec": "^3.0.0",
-    "tape": "^3.5.0"
+    "nixt": "^0.5.0",
+    "semantic-release": "^4.3.5",
+    "standard": "^8.5.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
   },
   "homepage": "https://github.com/boennemann/clean-script",
   "keywords": [
