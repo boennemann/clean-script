@@ -13,7 +13,7 @@
   "devDependencies": {
     "nixt": "^0.4.1",
     "semantic-release": "^3.0.4",
-    "standard": "^3.3.2",
+    "standard": "^8.5.0",
     "tap-spec": "^3.0.0",
     "tape": "^3.5.0"
   },
